@@ -18,7 +18,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/logo-ct.png">
   <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
   <title>
     Flask Material Dashboard 2 - {% block title %}{% endblock %} | AppSeed
@@ -34,6 +34,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="/static/assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVEkIoT4KsuSdXH0kSvIx8FKR3Wx4ouZ8"></script>
 
   {% block stylesheets %}{% endblock stylesheets %}
 
@@ -49,8 +51,6 @@
     {% block content %}{% endblock content %}
 
   </main>
-
-  {% include 'includes/fixed-plugin.html' %}
 
   {% include 'includes/scripts.html' %}
 
@@ -71,5 +71,16 @@
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="/static/assets/js/material-dashboard.min.js?v=3.0.0"></script>
 
+  <script>
+    function initMap() {
+      // Create a map object and specify the element to display it
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 10.796671084469574, lng: 106.67209434065497 },
+        zoom: 12
+      });
+    }
+    // Call initMap() function after the page has finished loading
+    initMap();
+  </script>
 </body> 
 </html>
