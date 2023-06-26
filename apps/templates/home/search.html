@@ -1,0 +1,86 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Cloud Parking System - Search Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    select {
+      width: 300px;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #search-results {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+<body> -->
+{% extends "layouts/base.html" %}
+
+{% block title %} Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+  <h1>Cloud Parking System - Search Booking</h1>
+
+  <form>
+    <label for="parking-area">Parking Area:</label>
+    <select id="parking-area" name="parking-area">
+      <option value="area1">Parking Area 1</option>
+      <option value="area2">Parking Area 2</option>
+      <option value="area3">Parking Area 3</option>
+    </select>
+    <br><br>
+    <label for="booking-id">Booking ID:</label>
+    <input type="text" id="booking-id" name="booking-id" placeholder="Enter a booking ID">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="search-results">
+    <!-- Display the search results here -->
+  </div>
+
+  <script>
+    // Add your JavaScript code here
+  </script>
+<!-- </body>
+</html> -->
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
